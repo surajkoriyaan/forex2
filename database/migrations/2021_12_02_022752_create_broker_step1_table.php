@@ -15,16 +15,16 @@ class CreateBrokerStep1Table extends Migration
     {
         Schema::create('broker_step1', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('country');
-            $table->string('countrycode');
-            $table->string('mobileno');
-            $table->string('email')->unique();
-            $table->longText('address');
-            $table->string('logo');
-            $table->string('youtubevideo1');
-            $table->string('youtubevideo2');
-            $table->string('youtubevideo3');
+            $table->string('name')->nullable();
+            $table->string('country')->nullable();
+            $table->string('countrycode')->nullable();
+            $table->string('mobileno')->nullable();
+            $table->string('email')->nullable()->unique();
+            $table->longText('address')->nullable();
+            $table->string('logo')->nullable();
+            $table->string('youtubevideo1')->nullable();
+            $table->string('youtubevideo2')->nullable();
+            $table->string('youtubevideo3')->nullable();
             $table->timestamps();
         });
     }
