@@ -16,6 +16,8 @@ class CreateAccountManagerTable extends Migration
         Schema::create('account_manager', function (Blueprint $table) {
             $table->id();
             $table->string('user_id',50);
+            $table->string('name',100);
+            $table->string('email',150);
             $table->string('city',100);
             $table->string('country',100);
             $table->string('country_code',50);
@@ -43,6 +45,7 @@ class CreateAccountManagerTable extends Migration
             $table->string('facebook_id')->nullable();
             $table->string('instagram_id')->nullable();
             $table->string('linkedin_id')->nullable();
+            $table->string('priority')->nullable();
             $table->timestamps();
         });
     }
