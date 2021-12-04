@@ -16,6 +16,13 @@ class CreateForexSignalProviderTable extends Migration
         Schema::create('forex_signal_provider', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
+            $table->string('city',100);
+            $table->string('country',100);
+            $table->string('country_code',50);
+            $table->string('mobileno',100);
+            $table->longText('address');
+            $table->string('gender',50);
+            $table->string('dob',100);
             $table->string('company_name')->nullable();
             $table->longText('description')->nullable();
             $table->string('price')->nullable();
@@ -26,6 +33,11 @@ class CreateForexSignalProviderTable extends Migration
             $table->string('video_gallery')->nullable();
             $table->string('image_gallery')->nullable();
             $table->string('logo')->nullable();
+            $table->string('whatsappno')->nullable();
+            $table->string('telegramlink')->nullable();
+            $table->string('facebook_id')->nullable();
+            $table->string('instagram_id')->nullable();
+            $table->string('linkedin_id')->nullable();
             $table->timestamps();
         });
     }

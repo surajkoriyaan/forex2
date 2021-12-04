@@ -15,7 +15,14 @@ class CreateBrokerTable extends Migration
     {
         Schema::create('broker', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id');
+            $table->string('user_id',50);
+            $table->string('city',100);
+            $table->string('country',100);
+            $table->string('country_code',50);
+            $table->string('mobileno',100);
+            $table->longText('address');
+            $table->string('gender',50);
+            $table->string('dob',100);
             $table->string('logo')->nullable();
             $table->string('youtubevideo1')->nullable();
             $table->string('youtubevideo2')->nullable();
@@ -47,6 +54,11 @@ class CreateBrokerTable extends Migration
             $table->longText('education')->nullable();
             $table->longText('awards')->nullable();
             $table->longText('conclusion')->nullable();
+            $table->string('whatsappno')->nullable();
+            $table->string('telegramlink')->nullable();
+            $table->string('facebook_id')->nullable();
+            $table->string('instagram_id')->nullable();
+            $table->string('linkedin_id')->nullable();
             $table->timestamps();
         });
     }
