@@ -62,6 +62,8 @@ class CreateBrokerTable extends Migration
             $table->string('instagram_id')->nullable();
             $table->string('linkedin_id')->nullable();
             $table->string('priority')->nullable();
+            $table->string('created_by')->nullable();
+            $table->string('updated_by')->nullable();
             $table->timestamps();
         });
     }
