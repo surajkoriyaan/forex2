@@ -15,7 +15,7 @@ class CreateForexSignalProviderTable extends Migration
     {
         Schema::create('forex_signal_provider', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id');
+            $table->foreignId('user_id');
             $table->string('name',100);
             $table->string('email',150);
             $table->string('city',100);

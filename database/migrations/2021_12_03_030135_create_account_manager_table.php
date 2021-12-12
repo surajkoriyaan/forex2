@@ -15,7 +15,7 @@ class CreateAccountManagerTable extends Migration
     {
         Schema::create('account_manager', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id',50);
+            $table->foreignId('user_id');
             $table->string('name',100);
             $table->string('email',150);
             $table->string('city',100);

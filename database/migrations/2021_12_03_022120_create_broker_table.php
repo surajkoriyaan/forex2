@@ -15,7 +15,7 @@ class CreateBrokerTable extends Migration
     {
         Schema::create('broker', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id',50);
+            $table->foreignId('user_id');
             $table->string('name',100);
             $table->string('email',150);
             $table->string('city',100);
@@ -62,6 +62,23 @@ class CreateBrokerTable extends Migration
             $table->string('instagram_id')->nullable();
             $table->string('linkedin_id')->nullable();
             $table->string('priority')->nullable();
+            $table->string('foundyear')->nullable();
+            $table->string('mindeposit')->nullable();
+            $table->string('headquarters')->nullable();
+            $table->string('maxleverage')->nullable();
+            $table->string('minimumtradevalume')->nullable();
+            $table->string('commission')->nullable();
+            $table->string('ea')->nullable();
+            $table->string('islamicaccound')->nullable();
+            $table->string('tradingconditionandfees')->nullable();
+            $table->string('depositmethodname')->nullable();
+            $table->string('depositlogo')->nullable();
+            $table->string('depositcommission')->nullable();
+            $table->string('depositprocessingtime')->nullable();
+            $table->string('withdrawalmethod')->nullable();
+            $table->string('withdrawallogo')->nullable();
+            $table->string('withdrawalcomission')->nullable();
+            $table->string('withdrawalprocessiongtime')->nullable();
             $table->string('created_by')->nullable();
             $table->string('updated_by')->nullable();
             $table->timestamps();
